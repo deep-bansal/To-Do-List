@@ -1,0 +1,301 @@
+.container{
+    display: flex;
+    justify-content: space-around;
+    width: 98vw;
+    height: 96vh;
+}
+
+#one{
+    width: 19%;
+    height: 100%;
+    min-width: 200px;
+    text-align: center;
+    font-family: Acme;
+    background-color: rgb(16, 173, 160);
+}
+
+.vl{
+    height: 100%;
+    width: 1px;
+    background-color: black;
+
+}
+#two{
+    width: 89%;
+    height: 100%;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    background-size: cover;
+    filter: brightness(110%);
+
+}
+
+
+.icon{
+    font-size: 2.5rem;
+}
+
+.pallets{
+    display:flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    visibility: hidden;    
+    margin: -10px auto;
+    align-items: flex-start;
+    /* transition: all 0.5s ease-in-out; */
+}
+
+.color{
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+    margin: 2px 4px;
+    display: inline-block;
+    cursor: pointer;
+    border:none;
+}
+
+.pallet-1{
+    margin: 0 auto;
+}
+
+.pallet-2{
+    
+    height: 300px;
+    width: 100%;
+    margin: 20px auto;
+    padding: 10px;
+}
+
+
+input[type = "radio"]{
+    background-color: transparent;
+    position: relative;
+    top: 10px;
+    border: none;
+    height: 15px;
+    width: 12px;
+
+}
+
+
+.note{
+
+    border-radius: 15px;
+    height: 35%;
+    width: 19%;
+    min-width: 150px;
+    margin-top: 3%;
+    position: relative;
+}
+
+#due-date{
+    width: 93%;
+    padding: 0px;
+    border-radius: 5px;
+    height: 30px;
+    margin-top: 10px;
+    border: 1px solid black;
+
+}
+
+#description{
+    padding: 9px;
+    border-radius: 10px;
+    height: 25px;
+    width: 87%;
+    border: 1px solid black;
+    font-size: 1.1rem;
+}
+
+#category{
+
+    width: 95%;
+    height: 33px;
+    margin-top: 10px;
+    border: 1px solid black;
+    padding: 8px;
+    border-radius: 8px;
+}
+
+.btn{
+    margin-top: 20px;
+    font-size: 1.5rem;
+    background-color: rgb(66, 224, 172);
+    color:white;
+    border-radius: 12px;
+    cursor: pointer;
+}
+
+.btn:focus{
+
+    outline:none;
+}
+
+.details{
+    
+    height: 45%;
+    width: 90%;
+    margin: 20px;
+    box-sizing: border-box;
+    padding: 10px;
+    font-size: 1.2rem;
+    font-family: sans-serif;
+    color: white;
+}
+
+.date{
+    height: 30px;
+    width: 85px;
+    position: relative;
+    top: 22%;
+    left: 6%;
+    font-family: sans-serif;
+    color: white;
+
+}
+
+.type{
+
+    height: 30px;
+    width: 96px;
+    text-align: center;
+    font-size: 1rem;
+    box-sizing: border-box;
+    padding-top: 6px;
+    position: relative;
+    top: -19%;
+    left: 5%;
+    font-family: sans-serif;
+    color: black;
+
+}
+
+.delete-note a{
+    position: absolute;
+    top: -56%;
+    right: -55px;
+    height: 53%;
+    width: 31.4%;
+    text-align: center;
+    box-sizing: border-box;
+    font-size: 2.2rem;
+    padding: 0px;
+    border-radius: 15px;
+    color: transparent;
+    transition: all 0.5s ease-in-out;
+}
+
+.note:hover .delete-note a{
+    visibility: visible;
+    background-color: #80808078;
+    color:black;
+
+}
+
+.fav-note{
+    position: absolute;
+    top: 3%;
+    right: 6px;
+    height: 19%;
+    width: 22.4%;
+    text-align: center;
+    box-sizing: border-box;
+    font-size: 1.9rem;
+    padding: 0px;
+    border-radius: 15px;
+    color: transparent;
+    transition: all 0.5s ease-in-out;
+}
+
+
+
+.note:hover .fav-note{
+    visibility: visible;
+    background-color: #80808078;
+    color:black;
+
+}
+
+.light{
+    background-color: #2ec1ac;
+}
+
+.darker{
+    background-color: #3e978b;
+
+}
+.green{
+    background-color:#d2e603 ;
+
+}
+.light-green{
+    background-color:#ffc93c;
+
+}
+
+input:focus{
+    outline: none;
+}
+
+select:focus{
+    outline:none;
+}
+
+.WORK{
+    background-color: red;
+}
+
+.PERSONAL{
+    background-color: yellow;
+}
+
+.OTHER{
+    background-color: pink;
+}
+
+.CLEANING{
+    background-color: green;
+}
+
+@media screen and (max-width : 1300px){
+    .delete-note a{
+        right: -35px;
+       
+    }    
+    
+}
+
+@media screen and (max-width : 1200px){
+    .type{
+        left: 7%;
+    }
+
+    .delete-note a{
+        top: -40px;
+        right: 20px;
+       
+    }    
+    
+}
+
+@media screen and (max-width : 1150px){
+    
+
+    .delete-note a{
+        right: -8px;
+    }
+    
+}
+
+@media screen and (max-width: 1000px)
+{
+    .delete-note a
+    {
+        top: -40px;
+        right: -1px;
+       
+    }
+
+}

@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+     <meta charset="UTF-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <link href='https://fonts.googleapis.com/css?family=Acme' rel='stylesheet'>
+     <script src="https://kit.fontawesome.com/094ee70a67.js" crossorigin="anonymous"></script>
+     <link rel="stylesheet" href="/css/home.css">
+     <title>To Do List</title>
+</head>
+
+<body>
+
+     <div class="container">
+
+          <div id="one" class="elements">
+
+               <h1>Docket</h1>
+
+               <p class="icon"> <i class="fas fa-plus-circle"></i> </p>
+
+               <div class="pallets">
+
+                    <div class="pallet-2">
+
+                         <form action="/create-note" method="POST">
+
+
+                              <div class="pallet-1">
+
+                                   <div class="color light" data-value="light">
+                                        <input  type="radio" name="color" value="light">
+     
+                                   </div>
+
+                                   <div class="color darker" data-value="darker">
+                                        <input type="radio" name="color" value="darker">
+                                   </div>
+
+                                   <div class="color green" data-value="green">
+                                        <input type="radio" name="color" value="green">
+                                   </div>
+
+                                   <div class="color light-green" data-value="light-green">
+                                        <input type="radio" name="color" value="light-green">
+                                   </div>
+
+                              </div>
+
+                              <br>
+
+                              <input type="text" name="note" id="description" placeholder="Description" required>
+
+                              <input type="date" name="duedate" id="due-date" required>
+
+                              <select name="category" id="category" required>
+                                   <option value="personal">PERSONAL</option>
+                                   <option value="work">WORK</option>
+                                   <option value="cleaning">CLEANING</option>
+                                   <option value="other">OTHER</option>
+
+                              </select>
+
+                              <button id="add-btn" class="btn" type="submit">Add</button>
+
+                         </form>
+
+                    </div>
+               </div>
+
+          </div>
+
+          <div class = "vl"></div>
+
+          <div style = "background-image: url('./images/bg.jpg');" id="two" class="elements">
+               
+                    <%for(let i of todo_list) {%>
+
+                         <div class="note <%= i.color %> ">
+
+                              <div class = "fav-note">
+                                        <i class="fas fa-star"></i>
+                              </div>
+          
+                              <div class="details">
+                                   <%= i.note %>
+          
+                              </div>
+          
+                              <div class="date">
+                                   <%= i.duedate %>
+                              </div>
+          
+                              <div class="type  <%= i.category %>">
+                                   <%= i.category %>
+                              </div>
+
+                              <div class = "delete-note note">
+                                   <a href = "/delete-note/?id=<%= i._id %>">
+                                        <i class="fas fa-trash-alt"></i>
+                                   </a>
+                                  
+                              </div>
+          
+                         </div>
+
+                        
+          
+          
+                    <%}%>
+           
+           
+        </div>
+
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.js" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
+
+    <script src="/script/script.js"></script>
+
+</body>
+</html>
